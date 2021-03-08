@@ -21,3 +21,26 @@
   font-weight: 700;
   font-display: swap;
 }
+
+.heading-primary {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-weight: 700;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 58px;
+  }
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-lg {
+  font-size: 18px;
+}
+
+.fw-normal {
+  font-weight: 400;
+}

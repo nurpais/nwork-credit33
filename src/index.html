@@ -83,5 +83,182 @@
       </div>
     </div>
     <!-- NAVBAR END -->
+
+    <!-- HEADER -->
+    <header class="header text-center pt-60px pt-lg-80px">
+      <div class="container">
+        <h1 class="heading-primary">
+          <span class="text-primary-yellow">Competent.</span> <span class="text-primary-blue">Trustworthy.</span>
+          <br class="d-none d-md-block" />
+          <span class="text-primary-teal">Professional.</span>
+        </h1>
+
+        <p class="text-lg text-light mt-3">
+          Credit Thirty3 is one of the Top Rated Licensed Money Lenders <br class="d-none d-md-block" />
+          in Singapore approved by the Ministry of Law.
+        </p>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- SECTION CALCULATOR -->
+    <section class="mt-85px mt-lg-140px">
+      <div class="container">
+        <div class="row gy-60px align-items-end">
+          <div class="col-md-7 col-lg-6">
+            <div class="calc-card">
+              <h3 class="calc-card__heading text-center">Personal Loan Calculator</h3>
+
+              <div class="calc__body">
+                <div class="calc__field mt-4">
+                  <div class="d-flex justify-content-between align-items-center px-50px">
+                    <strong class="text-sm text-dark">Loan Amount</strong>
+                    <div class="calc__result calc-card__heading text-primary-blue">
+                      $<span id="mLoanShow2">50,000</span>
+                    </div>
+                  </div>
+
+                  <div class="calc__range">
+                    <button
+                      class="calc__button calc__button-minus me-10px"
+                      onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 500"
+                    >
+                      <img src="images/svg/minus.svg" alt="" />
+                    </button>
+
+                    <div class="calc__input">
+                      <input type="range" value="50000" min="500" max="100000" id="mLoan" step="500" />
+                      <div class="d-flex justify-content-between mt-10px text-sm text-light">
+                        <span>$500</span>
+                        <span>$100,000</span>
+                      </div>
+                    </div>
+
+                    <button
+                      class="calc__button calc__button-plus ms-10px"
+                      onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 500;"
+                    >
+                      <img src="images/svg/plus.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div class="calc__field mt-15px">
+                  <div class="d-flex justify-content-between align-items-center px-50px">
+                    <strong class="text-sm text-dark">Loan Tenure</strong>
+                    <div class="calc__result calc-card__heading text-primary-blue">
+                      <span id="nTermShow">24</span> months
+                    </div>
+                  </div>
+
+                  <div class="calc__range">
+                    <button
+                      class="calc__button calc__button-minus me-10px"
+                      onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 3"
+                    >
+                      <img src="images/svg/minus.svg" alt="" />
+                    </button>
+
+                    <div class="calc__input">
+                      <input type="range" value="24" min="3" max="36" id="nTerm" />
+                      <div class="d-flex justify-content-between mt-10px text-sm text-light">
+                        <span>3 months</span>
+                        <span>36 months</span>
+                      </div>
+                    </div>
+
+                    <button
+                      class="calc__button calc__button-plus ms-10px"
+                      onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 3;"
+                    >
+                      <img src="images/svg/plus.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div class="calc__field mt-25px px-50px">
+                  <div class="d-flex mb-10px mb-md-1">
+                    <strong class="text-sm text-dark">Monthly Interest %</strong>
+                  </div>
+
+                  <div class="d-md-flex align-items-center">
+                    <div class="calc__input-radio">
+                      <input type="radio" id="nInterest1" name="nInterestValue" value="1" checked="" />
+                      <label for="nInterest1">
+                        <span>1</span>
+                      </label>
+
+                      <input type="radio" id="nInterest2" name="nInterestValue" value="2" />
+                      <label for="nInterest2">
+                        <span>2</span>
+                      </label>
+
+                      <input type="radio" id="nInterest3" name="nInterestValue" value="3" />
+                      <label for="nInterest3">
+                        <span>3</span>
+                      </label>
+
+                      <input type="radio" id="nInterest4" name="nInterestValue" value="4" />
+                      <label for="nInterest4">
+                        <span>4</span>
+                      </label>
+                    </div>
+
+                    <input type="hidden" id="nInterest" value="3" name="nInterest" />
+
+                    <button type="submit" class="calculate mt-40px mt-md-0 ms-md-30px" name="btnCalculate">
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 offset-md-1">
+            <div class="calc__chart">
+              <div class="calc__chart-block mx-auto">
+                <div id="donutchart" class="calc__chart-svg mb-20px"></div>
+                <div class="calc__chart-legend-1" id="principalt-graph">
+                  <span id="principal-legend">74.4%</span> <strong>Principal</strong>
+                </div>
+
+                <div class="calc__chart-legend-2" id="interestt-graph">
+                  <span id="interest-legend">25.6%</span> <strong>Interest</strong>
+                </div>
+
+                <div class="calc__chart-payment">
+                  <label class="calc__chart-label">Monthly Payment</label>
+                  <div class="calc__chart-output" id="mEMI">$774.96</div>
+                </div>
+              </div>
+
+              <div class="calc__chart-result">
+                <div>
+                  <label class="calc__chart-label">Total Interest</label>
+                  <div class="calc__chart-output" id="mInterest">$6,886.20</div>
+                </div>
+
+                <div>
+                  <label class="calc__chart-label">Total Payment</label>
+                  <div class="calc__chart-output" id="mPayment">$26,886.20</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION CALCULATOR END -->
+
+    <!-- GOOGLE CHART -->
+    <script>
+      var tag = document.createElement("script");
+      tag.async = "true";
+      tag.type = "text/javascript";
+      tag.src = "https://www.gstatic.com/charts/loader.js";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
   </body>
 </html>

@@ -22,6 +22,9 @@ $green-100: #79f2c0;
 $green-200: #57d9a3;
 $green-300: #00875a;
 
+$primary: $blue-300;
+$primary-yellow: $yellow-200;
+
 $theme-colors: (
   "dark": $primary-dark,
   "light": $primary-light,
@@ -51,6 +54,7 @@ $spacers: (
   5: $spacer * 3,
   // -------------
   5px: 5px,
+  10px: 10px,
   15px: 15px,
   20px: 20px,
   25px: 25px,
@@ -68,5 +72,14 @@ $spacers: (
   85px: 85px,
   90px: 90px,
   95px: 95px,
-  100px: 100px,
+  105px: 105px,
+  110px: 110px,
+  115px: 115px,
+  120px: 120px,
+  125px: 125px,
+  130px: 130px,
+  135px: 135px,
+  140px: 140px,
+  145px: 145px,
+  150px: 150px,
 );
