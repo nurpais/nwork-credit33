@@ -1,0 +1,7 @@
+.section {
+  padding: 75px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 100px 0;
+  }
+}

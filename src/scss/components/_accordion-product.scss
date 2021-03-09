@@ -1,0 +1,53 @@
+.product-accordions > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.product-accordion {
+  &__header {
+    padding: 3px 0;
+    position: relative;
+    cursor: pointer;
+    padding-left: 62px;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background-image: url(../images/svg/accordion-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &--active &__header::before {
+    transform: rotate(180deg);
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__body {
+    transition: all 0.2s ease;
+    overflow: hidden;
+    max-height: 0;
+    padding-left: 62px;
+
+    a {
+      margin-top: 14px;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+
+  &--active &__body {
+    margin-top: 13px;
+  }
+}

@@ -25,11 +25,24 @@
 .heading-primary {
   font-size: 48px;
   line-height: 1.2;
-  font-weight: 400;
   font-weight: 700;
 
   @include media-breakpoint-up(lg) {
     font-size: 58px;
+  }
+}
+
+.heading-secondary {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  & + * {
+    margin-top: 12px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 38px;
   }
 }
 
@@ -43,4 +56,14 @@
 
 .fw-normal {
   font-weight: 400;
+}
+
+.suptitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #92b9f4;
+  text-transform: uppercase;
+  & + * {
+    margin-top: 10px;
+  }
 }

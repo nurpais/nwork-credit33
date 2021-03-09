@@ -263,3 +263,25 @@
     }
   }
 }
+
+.calc-card,
+.calc__chart {
+  position: relative;
+  z-index: 20;
+}
+
+.calc-coin-wrapper {
+  position: relative;
+  z-index: 200;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 130px;
+    background-image: url(../images/svg/calc-coin.svg);
+    top: -38px;
+    left: -50px;
+    z-index: 2;
+  }
+}

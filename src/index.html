@@ -85,7 +85,7 @@
     <!-- NAVBAR END -->
 
     <!-- HEADER -->
-    <header class="header text-center pt-60px pt-lg-80px">
+    <header class="header text-center pt-60px pt-lg-80px header-bg">
       <div class="container">
         <h1 class="heading-primary">
           <span class="text-primary-yellow">Competent.</span> <span class="text-primary-blue">Trustworthy.</span>
@@ -101,155 +101,458 @@
     </header>
     <!-- HEADER END -->
 
-    <!-- SECTION CALCULATOR -->
-    <section class="mt-85px mt-lg-140px">
-      <div class="container">
-        <div class="row gy-60px align-items-end">
-          <div class="col-md-7 col-lg-6">
-            <div class="calc-card">
-              <h3 class="calc-card__heading text-center">Personal Loan Calculator</h3>
+    <main class="bg-gray">
+      <!-- SECTION CALCULATOR -->
+      <section class="mt-85px mt-lg-140px pb-75px pb-lg-100px">
+        <div class="container">
+          <div class="row gy-60px align-items-end">
+            <div class="col-lg-6">
+              <div class="calc-coin-wrapper">
+                <div class="calc-card">
+                  <h3 class="calc-card__heading text-center">Personal Loan Calculator</h3>
 
-              <div class="calc__body">
-                <div class="calc__field mt-4">
-                  <div class="d-flex justify-content-between align-items-center px-50px">
-                    <strong class="text-sm text-dark">Loan Amount</strong>
-                    <div class="calc__result calc-card__heading text-primary-blue">
-                      $<span id="mLoanShow2">50,000</span>
-                    </div>
-                  </div>
+                  <div class="calc__body">
+                    <div class="calc__field mt-4">
+                      <div class="d-flex justify-content-between align-items-center px-50px">
+                        <strong class="text-sm text-dark">Loan Amount</strong>
+                        <div class="calc__result calc-card__heading text-primary-blue">
+                          $<span id="mLoanShow2">50,000</span>
+                        </div>
+                      </div>
 
-                  <div class="calc__range">
-                    <button
-                      class="calc__button calc__button-minus me-10px"
-                      onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 500"
-                    >
-                      <img src="images/svg/minus.svg" alt="" />
-                    </button>
+                      <div class="calc__range">
+                        <button
+                          class="calc__button calc__button-minus me-10px"
+                          onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 500"
+                        >
+                          <img src="images/svg/minus.svg" alt="" />
+                        </button>
 
-                    <div class="calc__input">
-                      <input type="range" value="50000" min="500" max="100000" id="mLoan" step="500" />
-                      <div class="d-flex justify-content-between mt-10px text-sm text-light">
-                        <span>$500</span>
-                        <span>$100,000</span>
+                        <div class="calc__input">
+                          <input type="range" value="50000" min="500" max="100000" id="mLoan" step="500" />
+                          <div class="d-flex justify-content-between mt-10px text-sm text-light">
+                            <span>$500</span>
+                            <span>$100,000</span>
+                          </div>
+                        </div>
+
+                        <button
+                          class="calc__button calc__button-plus ms-10px"
+                          onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 500;"
+                        >
+                          <img src="images/svg/plus.svg" alt="" />
+                        </button>
                       </div>
                     </div>
 
-                    <button
-                      class="calc__button calc__button-plus ms-10px"
-                      onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 500;"
-                    >
-                      <img src="images/svg/plus.svg" alt="" />
-                    </button>
-                  </div>
-                </div>
+                    <div class="calc__field mt-15px">
+                      <div class="d-flex justify-content-between align-items-center px-50px">
+                        <strong class="text-sm text-dark">Loan Tenure</strong>
+                        <div class="calc__result calc-card__heading text-primary-blue">
+                          <span id="nTermShow">24</span> months
+                        </div>
+                      </div>
 
-                <div class="calc__field mt-15px">
-                  <div class="d-flex justify-content-between align-items-center px-50px">
-                    <strong class="text-sm text-dark">Loan Tenure</strong>
-                    <div class="calc__result calc-card__heading text-primary-blue">
-                      <span id="nTermShow">24</span> months
-                    </div>
-                  </div>
+                      <div class="calc__range">
+                        <button
+                          class="calc__button calc__button-minus me-10px"
+                          onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 3"
+                        >
+                          <img src="images/svg/minus.svg" alt="" />
+                        </button>
 
-                  <div class="calc__range">
-                    <button
-                      class="calc__button calc__button-minus me-10px"
-                      onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 3"
-                    >
-                      <img src="images/svg/minus.svg" alt="" />
-                    </button>
+                        <div class="calc__input">
+                          <input type="range" value="24" min="3" max="36" id="nTerm" />
+                          <div class="d-flex justify-content-between mt-10px text-sm text-light">
+                            <span>3 months</span>
+                            <span>36 months</span>
+                          </div>
+                        </div>
 
-                    <div class="calc__input">
-                      <input type="range" value="24" min="3" max="36" id="nTerm" />
-                      <div class="d-flex justify-content-between mt-10px text-sm text-light">
-                        <span>3 months</span>
-                        <span>36 months</span>
+                        <button
+                          class="calc__button calc__button-plus ms-10px"
+                          onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 3;"
+                        >
+                          <img src="images/svg/plus.svg" alt="" />
+                        </button>
                       </div>
                     </div>
 
-                    <button
-                      class="calc__button calc__button-plus ms-10px"
-                      onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 3;"
-                    >
-                      <img src="images/svg/plus.svg" alt="" />
-                    </button>
-                  </div>
-                </div>
+                    <div class="calc__field mt-25px px-50px">
+                      <div class="d-flex mb-10px mb-md-1">
+                        <strong class="text-sm text-dark">Monthly Interest %</strong>
+                      </div>
 
-                <div class="calc__field mt-25px px-50px">
-                  <div class="d-flex mb-10px mb-md-1">
-                    <strong class="text-sm text-dark">Monthly Interest %</strong>
-                  </div>
+                      <div class="d-md-flex align-items-center">
+                        <div class="calc__input-radio">
+                          <input type="radio" id="nInterest1" name="nInterestValue" value="1" checked="" />
+                          <label for="nInterest1">
+                            <span>1</span>
+                          </label>
 
-                  <div class="d-md-flex align-items-center">
-                    <div class="calc__input-radio">
-                      <input type="radio" id="nInterest1" name="nInterestValue" value="1" checked="" />
-                      <label for="nInterest1">
-                        <span>1</span>
-                      </label>
+                          <input type="radio" id="nInterest2" name="nInterestValue" value="2" />
+                          <label for="nInterest2">
+                            <span>2</span>
+                          </label>
 
-                      <input type="radio" id="nInterest2" name="nInterestValue" value="2" />
-                      <label for="nInterest2">
-                        <span>2</span>
-                      </label>
+                          <input type="radio" id="nInterest3" name="nInterestValue" value="3" />
+                          <label for="nInterest3">
+                            <span>3</span>
+                          </label>
 
-                      <input type="radio" id="nInterest3" name="nInterestValue" value="3" />
-                      <label for="nInterest3">
-                        <span>3</span>
-                      </label>
+                          <input type="radio" id="nInterest4" name="nInterestValue" value="4" />
+                          <label for="nInterest4">
+                            <span>4</span>
+                          </label>
+                        </div>
 
-                      <input type="radio" id="nInterest4" name="nInterestValue" value="4" />
-                      <label for="nInterest4">
-                        <span>4</span>
-                      </label>
+                        <input type="hidden" id="nInterest" value="3" name="nInterest" />
+
+                        <button type="submit" class="calculate mt-40px mt-md-0 ms-md-30px" name="btnCalculate">
+                          Calculate
+                        </button>
+                      </div>
                     </div>
-
-                    <input type="hidden" id="nInterest" value="3" name="nInterest" />
-
-                    <button type="submit" class="calculate mt-40px mt-md-0 ms-md-30px" name="btnCalculate">
-                      Calculate
-                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-4 offset-md-1">
-            <div class="calc__chart">
-              <div class="calc__chart-block mx-auto">
-                <div id="donutchart" class="calc__chart-svg mb-20px"></div>
-                <div class="calc__chart-legend-1" id="principalt-graph">
-                  <span id="principal-legend">74.4%</span> <strong>Principal</strong>
+            <div class="col-lg-4 offset-lg-1">
+              <div class="calc__chart">
+                <div class="calc__chart-block mx-auto">
+                  <div id="donutchart" class="calc__chart-svg mb-20px"></div>
+                  <div class="calc__chart-legend-1" id="principalt-graph">
+                    <span id="principal-legend">74.4%</span> <strong>Principal</strong>
+                  </div>
+
+                  <div class="calc__chart-legend-2" id="interestt-graph">
+                    <span id="interest-legend">25.6%</span> <strong>Interest</strong>
+                  </div>
+
+                  <div class="calc__chart-payment">
+                    <label class="calc__chart-label">Monthly Payment</label>
+                    <div class="calc__chart-output" id="mEMI">$774.96</div>
+                  </div>
                 </div>
 
-                <div class="calc__chart-legend-2" id="interestt-graph">
-                  <span id="interest-legend">25.6%</span> <strong>Interest</strong>
-                </div>
+                <div class="calc__chart-result">
+                  <div>
+                    <label class="calc__chart-label">Total Interest</label>
+                    <div class="calc__chart-output" id="mInterest">$6,886.20</div>
+                  </div>
 
-                <div class="calc__chart-payment">
-                  <label class="calc__chart-label">Monthly Payment</label>
-                  <div class="calc__chart-output" id="mEMI">$774.96</div>
-                </div>
-              </div>
-
-              <div class="calc__chart-result">
-                <div>
-                  <label class="calc__chart-label">Total Interest</label>
-                  <div class="calc__chart-output" id="mInterest">$6,886.20</div>
-                </div>
-
-                <div>
-                  <label class="calc__chart-label">Total Payment</label>
-                  <div class="calc__chart-output" id="mPayment">$26,886.20</div>
+                  <div>
+                    <label class="calc__chart-label">Total Payment</label>
+                    <div class="calc__chart-output" id="mPayment">$26,886.20</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- SECTION CALCULATOR END -->
+      </section>
+      <!-- SECTION CALCULATOR END -->
+
+      <!-- CTA BANNER  -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <div class="row align-items-center">
+              <div class="col-md-4 offset-lg-1 offset-xl-2 col-lg-2 d-none d-md-block">
+                <img class="cta-banner__img" src="images/cta-banner.png" alt="" />
+              </div>
+              <div class="col col-md-3 offset-lg-1 offset-xl-0">
+                <h3 class="cta-banner__heading">Satisfy with the numbers?</h3>
+              </div>
+              <div class="col col-md-3 offset-md-1">
+                <a href="#" class="button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA BANNER END  -->
+
+      <!-- SECTION SERVICES -->
+      <section class="section px-20px px-md-0">
+        <div class="container">
+          <div class="text-md-center">
+            <h3 class="suptitle">WHY CREDIT THIRTY3</h3>
+            <h2 class="heading-secondary">Get your fast cash loan <span class="text-primary-blue">today</span></h2>
+            <p class="text-lg text-light">It takes only 3 minutes to complete the application.</p>
+          </div>
+
+          <div class="mt-50px mt-lg-65px">
+            <div class="row gy-45px">
+              <div class="col-md-6 col-lg-5">
+                <div class="service-card">
+                  <div class="service-card__icon">
+                    <img src="images/svg/service-cash.svg" alt="" />
+                  </div>
+
+                  <div class="service-card__content">
+                    <h3 class="service-card__heading">Cash on the Fly</h3>
+                    <p class="mt-10px">
+                      Your time is valuable, and we know that. Our loan officers will get you approved and out the door
+                      in time to finish what you have set out to do for the day.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-5 offset-lg-1">
+                <div class="service-card">
+                  <div class="service-card__icon">
+                    <img src="images/svg/service-safe.svg" alt="" />
+                  </div>
+
+                  <div class="service-card__content">
+                    <h3 class="service-card__heading">Safe & Secure</h3>
+                    <p class="mt-10px">
+                      We take pride in keeping our client’s information safe and secure. To do this we follow top
+                      security measures with every client to keep your identity safe.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-5">
+                <div class="service-card">
+                  <div class="service-card__icon">
+                    <img src="images/svg/service-rates.svg" alt="" />
+                  </div>
+
+                  <div class="service-card__content">
+                    <h3 class="service-card__heading">Rates & Plans</h3>
+                    <p class="mt-10px">
+                      We have plans that can fit every need and any budget. With rates as low as 1% p.m we strive to
+                      give you the best interest rate for your loan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-5 offset-lg-1">
+                <div class="service-card">
+                  <div class="service-card__icon">
+                    <img src="images/svg/service-caters.svg" alt="" />
+                  </div>
+
+                  <div class="service-card__content">
+                    <h3 class="service-card__heading">Caters for All</h3>
+                    <p class="mt-10px">
+                      With competitive rates, we welcome everyone. We have solutions to offer so that you can feel
+                      confident about your loan. Get yours today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION SERVICES END -->
+
+      <!-- SECTION PRODUCT -->
+      <section class="section px-20px px-md-0">
+        <div class="container">
+          <div class="row gy-45px">
+            <div class="col-md-6">
+              <img src="images/svg/product-img.svg" alt="" />
+            </div>
+
+            <div class="col-md-6">
+              <h3 class="suptitle">WHAT WE PROVIDE</h3>
+              <h2 class="heading-secondary">Our <span class="text-primary-blue">popular</span> loan products</h2>
+              <p class="text-lg text-light">We are confident of finding the right loan for you.</p>
+
+              <div class="mt-40px mt-lg-45px">
+                <div class="product-accordions">
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Personal Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Foreigner Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Debt Consolidation Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Wedding Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Business Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Home Renovation Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Accordion item -->
+                  <div class="product-accordion">
+                    <div class="product-accordion__header">
+                      <h3 class="product-accordion__heading">Medical Loan</h3>
+                    </div>
+
+                    <div class="product-accordion__body">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION PRODUCT END -->
+
+      <!-- SECTION STEP -->
+      <section class="section-step mt-135px px-20px px-md-0">
+        <div class="container">
+          <div class="row align-items-xl-end gy-50px">
+            <div class="col-md-6 col-xl-4">
+              <h3 class="suptitle">HOW TO APPLY</h3>
+              <h2 class="heading-secondary text-gray">
+                <span class="text-primary-yellow">4 simple steps</span> to <br />
+                get your money.
+              </h2>
+
+              <a href="#" class="button mt-40px d-none d-md-inline-flex">APPLY NOW</a>
+            </div>
+
+            <div class="col-md-6 col-xl-8">
+              <div class="row gy-35px gx-xl-40px">
+                <div class="col-6 col-xl-3">
+                  <div class="step-card">
+                    <div class="step-card__icon">
+                      <img src="images/svg/step-apply.svg" alt="" />
+                    </div>
+                    <h3 class="step-card__heading"><span class="text-blue-200">1.</span> Apply</h3>
+                    <p class="text-gray mt-10px">Submit your loan application form.</p>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3">
+                  <div class="step-card">
+                    <div class="step-card__icon">
+                      <img src="images/svg/step-advice.svg" alt="" />
+                    </div>
+                    <h3 class="step-card__heading"><span class="text-teal-200">2.</span> Advice</h3>
+                    <p class="text-gray mt-10px">Understand the specifics of your loan.</p>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3">
+                  <div class="step-card">
+                    <div class="step-card__icon">
+                      <img src="images/svg/step-approval.svg" alt="" />
+                    </div>
+                    <h3 class="step-card__heading"><span class="text-green-200">3.</span> Approval</h3>
+                    <p class="text-gray mt-10px">Get your loan approved in minutes.</p>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3">
+                  <div class="step-card">
+                    <div class="step-card__icon">
+                      <img src="images/svg/step-agreement.svg" alt="" />
+                    </div>
+                    <h3 class="step-card__heading"><span class="text-yellow-200">4.</span> Agreement</h3>
+                    <p class="text-gray mt-10px">Sign-off and receive money on the spot.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-100px text-center d-md-none">
+                <a href="#" class="button">APPLY NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION STEP END -->
+    </main>
 
     <!-- GOOGLE CHART -->
     <script>

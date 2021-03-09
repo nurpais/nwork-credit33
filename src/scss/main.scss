@@ -15,11 +15,18 @@
 
 // LAYOUTS
 @import "layouts/navbar";
+@import "layouts/header";
+@import "layouts/section";
 @import "layouts/footer";
+@import "layouts/section-step";
 
 // COMPONENTS
 @import "components/buttons";
 @import "components/calc";
+@import "components/cta-banner";
+@import "components/card-service";
+@import "components/card-step";
+@import "components/accordion-product";
 
 // PAGES
 @import "pages/home";

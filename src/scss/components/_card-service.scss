@@ -1,0 +1,20 @@
+.service-card {
+  &__icon {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+
+    &__icon {
+      margin: 0 20px 0 0;
+    }
+  }
+}
