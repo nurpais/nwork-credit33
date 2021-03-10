@@ -9,8 +9,46 @@
   color: #fff;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   transition: opacity 0.2s ease;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1.5px;
+  vertical-align: middle;
+
+  &--gray {
+    background-color: $gray;
+    color: $dark;
+  }
+
+  &--secondary {
+    background-color: $primary-yellow;
+    box-shadow: 0px 0px 10px 3px rgba(255, 196, 0, 0.3);
+    color: $primary-dark;
+  }
+
+  span {
+    transform: translateY(2px);
+  }
+
+  &--icon {
+    span {
+      transform: translate(8px, 2px);
+    }
+
+    background-position: -1px bottom;
+    background-repeat: no-repeat;
+  }
+
+  &--icon-call {
+    background-image: url(../images/svg/button-icon-call.svg);
+  }
+  &--icon-email {
+    background-image: url(../images/svg/button-icon-email.svg);
+  }
+  &--icon-apply {
+    background-image: url(../images/svg/button-icon-apply.svg);
+  }
 
   &:hover {
     opacity: 0.9;

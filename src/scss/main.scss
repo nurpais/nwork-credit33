@@ -8,6 +8,10 @@
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 
+// SWIPER
+@import "swiper/swiper.scss";
+@import "swiper/components/pagination/pagination.scss";
+
 // BASE
 @import "base/reset";
 @import "base/base";
@@ -19,6 +23,9 @@
 @import "layouts/section";
 @import "layouts/footer";
 @import "layouts/section-step";
+@import "layouts/section-questions";
+@import "layouts/swiper-reviews";
+@import "layouts/swiper-news";
 
 // COMPONENTS
 @import "components/buttons";
@@ -26,6 +33,9 @@
 @import "components/cta-banner";
 @import "components/card-service";
 @import "components/card-step";
+@import "components/card-review";
+@import "components/card-news";
+@import "components/accordion";
 @import "components/accordion-product";
 
 // PAGES

@@ -1,0 +1,24 @@
+.section-questions {
+  padding: 90px 0 150px;
+  position: relative;
+  background-color: $primary-dark;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 304px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../images/svg/section-questions-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $gray;
+    z-index: -1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 200px;
+  }
+}

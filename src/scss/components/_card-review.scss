@@ -1,0 +1,13 @@
+.review-card {
+  @include card;
+  padding: 36px 30px 34px;
+  text-align: center;
+
+  &__stars {
+    display: inline-flex;
+
+    & > * + * {
+      margin-left: 10px;
+    }
+  }
+}

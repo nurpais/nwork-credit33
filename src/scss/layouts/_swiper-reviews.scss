@@ -1,0 +1,34 @@
+.swiper-reviews {
+  padding: 30px 20px 40px !important;
+  margin: 0 -20px;
+  position: relative;
+
+  .swiper-next,
+  .swiper-prev {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    background-color: $primary;
+    top: 50%;
+    transform: translateY(calc(-50% - 10px));
+    z-index: 10;
+    background-image: url(../images/svg/swiper-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .swiper-prev {
+    left: 0;
+    transform: translateY(calc(-50% - 10px)) scaleX(-1);
+  }
+
+  .swiper-next {
+    right: 0;
+  }
+
+  .swiper-button-disabled {
+    background-color: $disabled;
+  }
+}
