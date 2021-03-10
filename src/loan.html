@@ -85,407 +85,113 @@
     <!-- NAVBAR END -->
 
     <!-- HEADER -->
-    <header class="header text-center pt-40px pt-lg-80px">
+    <header class="header pt-40px pt-lg-80px px-20px px-md-0">
       <div class="container">
-        <h1 class="heading-primary">
-          <span class="text-primary-yellow">Competent.</span> <span class="text-primary-blue">Trustworthy.</span>
-          <br class="d-none d-md-block" />
-          <span class="text-primary-teal">Professional.</span>
-        </h1>
+        <div class="row justify-content-between">
+          <div class="col-md-5">
+            <img src="images/svg/loan-header.svg" alt="" />
+          </div>
 
-        <p class="text-lg text-light mt-3">
-          Credit Thirty3 is one of the Top Rated Licensed Money Lenders <br class="d-none d-md-block" />
-          in Singapore approved by the Ministry of Law.
-        </p>
+          <div class="col-md-6">
+            <div class="mt-30px mt-md-50px">
+              <h1 class="heading-primary text-primary-blue">
+                What is <br />
+                personal loan?
+              </h1>
+
+              <p class="text-lg text-light mt-3">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- HEADER END -->
 
-    <main class="bg-gray main-bg">
-      <!-- SECTION CALCULATOR -->
-      <section class="pb-75px pb-lg-100px calc-component">
-        <div class="container">
-          <div class="row align-items-end">
-            <div class="col-lg-6">
-              <div class="calc-coin-wrapper">
-                <div class="calc-card">
-                  <h3 class="calc-card__heading text-center">Personal Loan Calculator</h3>
-
-                  <div class="calc__body">
-                    <div class="calc__field mt-4">
-                      <div class="d-flex justify-content-between align-items-center px-50px">
-                        <strong class="text-sm text-dark">Loan Amount</strong>
-                        <div class="calc__result calc-card__heading text-primary-blue">
-                          $<span id="mLoanShow2">50,000</span>
-                        </div>
-                      </div>
-
-                      <div class="calc__range">
-                        <button
-                          class="calc__button calc__button-minus me-10px"
-                          onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 500"
-                        >
-                          <img src="images/svg/minus.svg" alt="" />
-                        </button>
-
-                        <div class="calc__input">
-                          <input type="range" value="50000" min="500" max="100000" id="mLoan" step="500" />
-                          <div class="d-flex justify-content-between mt-10px text-sm text-light">
-                            <span>$500</span>
-                            <span>$100,000</span>
-                          </div>
-                        </div>
-
-                        <button
-                          class="calc__button calc__button-plus ms-10px"
-                          onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 500;"
-                        >
-                          <img src="images/svg/plus.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="calc__field mt-15px">
-                      <div class="d-flex justify-content-between align-items-center px-50px">
-                        <strong class="text-sm text-dark">Loan Tenure</strong>
-                        <div class="calc__result calc-card__heading text-primary-blue">
-                          <span id="nTermShow">24</span> months
-                        </div>
-                      </div>
-
-                      <div class="calc__range">
-                        <button
-                          class="calc__button calc__button-minus me-10px"
-                          onclick="this.nextElementSibling.children[0].value = Number(this.nextElementSibling.children[0].value) - 3"
-                        >
-                          <img src="images/svg/minus.svg" alt="" />
-                        </button>
-
-                        <div class="calc__input">
-                          <input type="range" value="24" min="3" max="36" id="nTerm" />
-                          <div class="d-flex justify-content-between mt-10px text-sm text-light">
-                            <span>3 months</span>
-                            <span>36 months</span>
-                          </div>
-                        </div>
-
-                        <button
-                          class="calc__button calc__button-plus ms-10px"
-                          onclick="this.previousElementSibling.children[0].value = Number(this.previousElementSibling.children[0].value) + 3;"
-                        >
-                          <img src="images/svg/plus.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="calc__field mt-25px px-50px">
-                      <div class="d-flex mb-10px mb-md-1">
-                        <strong class="text-sm text-dark">Monthly Interest %</strong>
-                      </div>
-
-                      <div class="d-md-flex align-items-center">
-                        <div class="calc__input-radio">
-                          <input type="radio" id="nInterest1" name="nInterestValue" value="1" checked="" />
-                          <label for="nInterest1">
-                            <span>1</span>
-                          </label>
-
-                          <input type="radio" id="nInterest2" name="nInterestValue" value="2" />
-                          <label for="nInterest2">
-                            <span>2</span>
-                          </label>
-
-                          <input type="radio" id="nInterest3" name="nInterestValue" value="3" />
-                          <label for="nInterest3">
-                            <span>3</span>
-                          </label>
-
-                          <input type="radio" id="nInterest4" name="nInterestValue" value="4" />
-                          <label for="nInterest4">
-                            <span>4</span>
-                          </label>
-                        </div>
-
-                        <input type="hidden" id="nInterest" value="3" name="nInterest" />
-
-                        <button type="submit" class="calculate mt-40px mt-md-0 ms-md-30px" name="btnCalculate">
-                          Calculate
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 offset-lg-1">
-              <div class="calc__chart mt-60px mt-lg-0">
-                <div class="calc__chart-block mx-auto">
-                  <div id="donutchart" class="calc__chart-svg mb-20px"></div>
-                  <div class="calc__chart-legend-1" id="principalt-graph">
-                    <span id="principal-legend">74.4%</span> <strong>Principal</strong>
-                  </div>
-
-                  <div class="calc__chart-legend-2" id="interestt-graph">
-                    <span id="interest-legend">25.6%</span> <strong>Interest</strong>
-                  </div>
-
-                  <div class="calc__chart-payment">
-                    <label class="calc__chart-label">Monthly Payment</label>
-                    <div class="calc__chart-output" id="mEMI">$774.96</div>
-                  </div>
-                </div>
-
-                <div class="calc__chart-result">
-                  <div>
-                    <label class="calc__chart-label">Total Interest</label>
-                    <div class="calc__chart-output" id="mInterest">$6,886.20</div>
-                  </div>
-
-                  <div>
-                    <label class="calc__chart-label">Total Payment</label>
-                    <div class="calc__chart-output" id="mPayment">$26,886.20</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION CALCULATOR END -->
-
-      <!-- CTA BANNER  -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-banner">
-            <div class="row align-items-center">
-              <div class="col-md-4 offset-lg-1 offset-xl-2 col-lg-2 d-none d-md-block">
-                <img class="cta-banner__img" src="images/cta-banner.png" alt="" />
-              </div>
-              <div class="col col-md-3 offset-lg-1 offset-xl-0">
-                <h3 class="cta-banner__heading">Satisfy with the numbers?</h3>
-              </div>
-              <div class="col col-md-3 offset-md-1">
-                <a href="#" class="button">Apply Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CTA BANNER END  -->
-
+    <main class="bg-gray main-bg main-bg--loan">
       <!-- SECTION SERVICES -->
-      <section class="section px-20px px-md-0">
-        <div class="container">
-          <div class="text-md-center">
-            <h3 class="suptitle">WHY CREDIT THIRTY3</h3>
-            <h2 class="heading-secondary">Get your fast cash loan <span class="text-primary-blue">today</span></h2>
-            <p class="text-lg text-light">It takes only 3 minutes to complete the application.</p>
-          </div>
+      <div>
+        <section class="section pt-0 px-20px px-md-0">
+          <div class="container">
+            <div class="text-md-center">
+              <h3 class="suptitle">HOW IT HELPS</h3>
+              <h2 class="heading-secondary"><span class="text-primary-blue">Advantages</span> of personal loan</h2>
+              <p class="text-lg text-light">Lorem Ipsum is simply dummy text.</p>
+            </div>
 
-          <div class="mt-50px mt-lg-65px">
-            <div class="row gy-45px">
-              <div class="col-md-6 col-lg-5">
-                <div class="service-card">
-                  <div class="service-card__icon">
-                    <img src="images/svg/service-cash.svg" alt="" />
-                  </div>
+            <div class="mt-50px mt-lg-65px">
+              <div class="row gy-45px gx-xl-0">
+                <div class="col-md-6 col-lg-5">
+                  <div class="service-card">
+                    <div class="service-card__icon">
+                      <img src="images/svg/service-appl.svg" alt="" />
+                    </div>
 
-                  <div class="service-card__content">
-                    <h3 class="service-card__heading">Cash on the Fly</h3>
-                    <p class="mt-10px">
-                      Your time is valuable, and we know that. Our loan officers will get you approved and out the door
-                      in time to finish what you have set out to do for the day.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="service-card">
-                  <div class="service-card__icon">
-                    <img src="images/svg/service-safe.svg" alt="" />
-                  </div>
-
-                  <div class="service-card__content">
-                    <h3 class="service-card__heading">Safe & Secure</h3>
-                    <p class="mt-10px">
-                      We take pride in keeping our client’s information safe and secure. To do this we follow top
-                      security measures with every client to keep your identity safe.
-                    </p>
+                    <div class="service-card__content">
+                      <h3 class="service-card__heading">Straightforward Application</h3>
+                      <p class="mt-10px">
+                        We don't take you through complicated and unnecessary loan application processes. All you have
+                        to do is fill a simple online form and attach the requirements.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-6 col-lg-5">
-                <div class="service-card">
-                  <div class="service-card__icon">
-                    <img src="images/svg/service-rates.svg" alt="" />
-                  </div>
+                <div class="col-md-6 col-lg-5 offset-lg-1">
+                  <div class="service-card">
+                    <div class="service-card__icon">
+                      <img src="images/svg/service-score.svg" alt="" />
+                    </div>
 
-                  <div class="service-card__content">
-                    <h3 class="service-card__heading">Rates & Plans</h3>
-                    <p class="mt-10px">
-                      We have plans that can fit every need and any budget. With rates as low as 1% p.m we strive to
-                      give you the best interest rate for your loan.
-                    </p>
+                    <div class="service-card__content">
+                      <h3 class="service-card__heading">Worry Not About Bad Credit Score</h3>
+                      <p class="mt-10px">
+                        We aim at helping individuals during their bad financial days. To us, your bad credit score does
+                        not prevent you from getting personal loans from us.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="service-card">
-                  <div class="service-card__icon">
-                    <img src="images/svg/service-caters.svg" alt="" />
+                <div class="col-md-6 col-lg-5">
+                  <div class="service-card">
+                    <div class="service-card__icon">
+                      <img src="images/svg/service-lowest-rares.svg" alt="" />
+                    </div>
+
+                    <div class="service-card__content">
+                      <h3 class="service-card__heading">Lowest Interest Rates</h3>
+                      <p class="mt-10px">
+                        The industry of personal loans is highly regulated to prevent borrowers from exploitation. So,
+                        you can always expect favorable terms from us. Apart from having a flexible payment term.
+                      </p>
+                    </div>
                   </div>
+                </div>
 
-                  <div class="service-card__content">
-                    <h3 class="service-card__heading">Caters for All</h3>
-                    <p class="mt-10px">
-                      With competitive rates, we welcome everyone. We have solutions to offer so that you can feel
-                      confident about your loan. Get yours today.
-                    </p>
+                <div class="col-md-6 col-lg-5 offset-lg-1">
+                  <div class="service-card">
+                    <div class="service-card__icon">
+                      <img src="images/svg/service-payment.svg" alt="" />
+                    </div>
+
+                    <div class="service-card__content">
+                      <h3 class="service-card__heading">Different Payment Options</h3>
+                      <p class="mt-10px">
+                        We like to keep in mind the uniqueness and diversity of our customer needs and capabilities.
+                        When you apply for our personal loans, we guide you through the process.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- SECTION SERVICES END -->
-
-      <!-- SECTION PRODUCT -->
-      <section class="section px-20px px-md-0">
-        <div class="container">
-          <div class="row gy-45px">
-            <div class="col-md-6">
-              <img src="images/svg/product-img.svg" alt="" />
-            </div>
-
-            <div class="col-md-6">
-              <h3 class="suptitle">WHAT WE PROVIDE</h3>
-              <h2 class="heading-secondary">Our <span class="text-primary-blue">popular</span> loan products</h2>
-              <p class="text-lg text-light">We are confident of finding the right loan for you.</p>
-
-              <div class="mt-40px mt-lg-45px">
-                <div class="product-accordions">
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Personal Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Foreigner Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Debt Consolidation Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Wedding Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Business Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Home Renovation Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-
-                  <!-- Accordion item -->
-                  <div class="product-accordion">
-                    <div class="product-accordion__header">
-                      <h3 class="product-accordion__heading">Medical Loan</h3>
-                    </div>
-
-                    <div class="product-accordion__body">
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                      </p>
-
-                      <a href="#">Learn More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION PRODUCT END -->
 
       <!-- SECTION STEP -->
       <div class="section pt-0">
@@ -845,7 +551,7 @@
       <section class="section text-center px-20px px-md-">
         <div class="container">
           <h3 class="suptitle">ARTICLES & NEWS</h3>
-          <h2 class="heading-secondary">Explore more</h2>
+          <h2 class="heading-secondary">More about <span class="text-primary-blue">personal loan</span></h2>
           <p class="text-lg text-light">Equip yourself with useful knowledge.</p>
 
           <div class="mt-30px">
@@ -905,8 +611,31 @@
       <!-- SECTION NEWS END -->
 
       <!-- SECTION QUESTIONS -->
-      <section class="section-questions text-center mt-md-50px">
+      <section class="section-questions section-questions--card text-center mt-50px">
         <div class="container">
+          <div class="apply-card mb-150px mb-lg-200px">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="apply-card__img" src="images/svg/apply-card.svg" alt="" />
+              </div>
+              <div class="col-md-6">
+                <div class="apply-card__body">
+                  <h2 class="heading-secondary d-md-none">
+                    Get your <br />
+                    money now!
+                  </h2>
+                  <h2 class="heading-secondary d-none d-md-block mt-0">Get started now!</h2>
+                  <p class="mt-3 mt-md-4">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.
+                  </p>
+                  <a href="#" class="button mt-4 mt-md-35px">
+                    <span>APPLY NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <img class="mb-10px" src="images/svg/questions-qoin.svg" alt="" />
           <h2 class="heading-secondary text-gray">Have any <span class="text-primary-yellow">questions?</span></h2>
 
@@ -934,7 +663,6 @@
         </div>
       </section>
     </main>
-
     <!-- SECTION QUESTIONS END -->
 
     <!-- FOOTER -->
@@ -982,15 +710,5 @@
       </div>
     </div>
     <!-- FOOTER END -->
-
-    <!-- GOOGLE CHART -->
-    <script>
-      var tag = document.createElement("script");
-      tag.async = "true";
-      tag.type = "text/javascript";
-      tag.src = "https://www.gstatic.com/charts/loader.js";
-      var firstScriptTag = document.getElementsByTagName("script")[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    </script>
   </body>
 </html>

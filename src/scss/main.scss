@@ -1,6 +1,7 @@
 // ABSTRACT
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/classes";
 
 // BOOTSTRAP
 @import "bootstrap/scss/bootstrap-utilities.scss";
@@ -35,6 +36,7 @@
 @import "components/card-step";
 @import "components/card-review";
 @import "components/card-news";
+@import "components/card-apply";
 @import "components/accordion";
 @import "components/accordion-product";
 

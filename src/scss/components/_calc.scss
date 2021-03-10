@@ -1,3 +1,11 @@
+.calc-component {
+  margin-top: -186px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -180px;
+  }
+}
+
 .calc-card {
   @include card;
   padding: 45px 20px 40px;

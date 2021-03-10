@@ -6,6 +6,7 @@ const PrettierPlugin = require("prettier-webpack-plugin");
 module.exports = {
   entry: {
     app: paths.src + "/index.js",
+    calc: paths.src + "/js/calc.js",
   },
   output: {
     path: paths.build,
@@ -27,12 +28,18 @@ module.exports = {
 
     // Generates an HTML file from a template
     new HtmlWebpackPlugin({
-      //   title: "webpack Boilerplate",
-      // favicon: paths.src + "/images/favicon.png",
-      template: paths.src + "/index.html", // template file
-      filename: "index.html", // output file
+      template: paths.src + "/index.html",
+      filename: "index.html",
       minify: false,
       scriptLoading: "blocking",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: paths.src + "/loan.html",
+      filename: "loan.html",
+      minify: false,
+      scriptLoading: "blocking",
+      excludeChunks: ["calc"],
     }),
   ],
   // Determine how modules within the project are treated

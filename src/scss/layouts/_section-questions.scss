@@ -2,7 +2,14 @@
   padding: 90px 0 150px;
   position: relative;
   background-color: $primary-dark;
+
   z-index: 10;
+
+  
+
+  &--card {
+    padding-top: 40px;
+  }
 
   &::before {
     content: "";
@@ -16,6 +23,15 @@
     background-position: center;
     background-color: $gray;
     z-index: -1;
+  }
+
+  @include media-breakpoint-up(md) {
+    &--card {
+      background: linear-gradient(0deg, $primary-dark 0%, $primary-dark 62%, rgba(253, 187, 45, 0) 47%);
+      &::before {
+        top: 120px !important;
+      }
+    }
   }
 
   @include media-breakpoint-up(lg) {
