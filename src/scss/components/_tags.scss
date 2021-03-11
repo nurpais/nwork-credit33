@@ -1,0 +1,26 @@
+.tags {
+  display: flex;
+  margin: -5px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+
+  & > * {
+    margin: 5px;
+  }
+}
+
+.tag {
+  background: $disabled;
+  border-radius: 8px;
+  color: $primary-light;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

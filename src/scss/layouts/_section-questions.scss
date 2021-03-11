@@ -2,10 +2,13 @@
   padding: 90px 0 150px;
   position: relative;
   background-color: $primary-dark;
+  background: linear-gradient(0deg, $primary-dark 0%, $primary-dark 55%, rgba(253, 187, 45, 0) 47%);
+
+  @include media-breakpoint-up(lg) {
+    background: linear-gradient(0deg, $primary-dark 0%, $primary-dark 46%, rgba(253, 187, 45, 0) 46%);
+  }
 
   z-index: 10;
-
-  
 
   &--card {
     padding-top: 40px;
@@ -21,8 +24,20 @@
     background-image: url(../images/svg/section-questions-bg.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: $gray;
     z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    left: 0;
+    top: -156px;
+    background-image: url(../images/svg/section-questions-bg-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
   }
 
   @include media-breakpoint-up(md) {

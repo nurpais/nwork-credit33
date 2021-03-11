@@ -1,5 +1,5 @@
 .news-card {
-  max-width: 334px;
+  max-width: 360px;
   display: inline-block;
   background-color: #fff;
   border-radius: 8px;
@@ -17,5 +17,24 @@
 
   &:hover {
     box-shadow: 0px 3px 15px 3px rgba(23, 43, 77, 0.08);
+  }
+
+  &--borderless {
+    padding: 0;
+    border: none;
+
+    &:hover {
+      box-shadow: initial;
+    }
+  }
+
+  &--borderless &__img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &--borderless &__body {
+    padding: 0;
+    padding-top: 20px;
   }
 }
