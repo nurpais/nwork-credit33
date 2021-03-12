@@ -33,6 +33,14 @@
     max-height: 0;
     overflow: hidden;
     transition: all 0.2s ease;
+
+    > *:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    a {
+      color: $primary;
+    }
   }
 
   &--active {

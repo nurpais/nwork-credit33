@@ -1,0 +1,38 @@
+.section-stats {
+  background-color: #fff;
+  padding: 100px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 106px 0 114px;
+  }
+}
+
+.stats {
+  margin: -20px 0;
+
+  &__item {
+    padding: 20px 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px;
+    justify-content: center;
+
+    &__item {
+      width: 50%;
+      padding: 20px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: 0 -50px;
+    flex-wrap: nowrap;
+
+    &__item {
+      width: initial;
+      padding: 0 50px;
+    }
+  }
+}

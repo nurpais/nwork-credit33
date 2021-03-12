@@ -62,6 +62,13 @@ module.exports = {
       scriptLoading: "blocking",
       excludeChunks: ["calc"],
     }),
+    new HtmlWebpackPlugin({
+      template: paths.src + "/about-us.html",
+      filename: "about-us.html",
+      minify: false,
+      scriptLoading: "blocking",
+      excludeChunks: ["calc"],
+    }),
   ],
   // Determine how modules within the project are treated
   module: {

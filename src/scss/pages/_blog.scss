@@ -96,8 +96,23 @@
     color: $primary-light;
 
     &:hover {
-      background-color: #0e76a8;
       color: #fff;
+    }
+
+    &.facebook:hover {
+      background-color: #3b5998;
+    }
+
+    &.linkedin:hover {
+      background-color: #0e76a8;
+    }
+
+    &.whatsapp:hover {
+      background-color: #4fce5d;
+    }
+
+    &.telegram:hover {
+      background-color: #0088cc;
     }
   }
 

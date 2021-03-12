@@ -27,7 +27,7 @@
     z-index: -1;
   }
 
-  &::after {
+  &--second-layer::after {
     content: "";
     position: absolute;
     height: 450px;

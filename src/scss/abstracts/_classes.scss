@@ -20,7 +20,7 @@
     z-index: -1;
     width: 100%;
     height: 406px;
-    background-image: url(../images/svg/header-bg.svg);
+    background-image: url(../images/svg/top-wave.svg);
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -40,6 +40,27 @@
       &::before {
         top: -406px !important;
       }
+    }
+  }
+}
+
+.top-wave {
+  position: relative;
+  z-index: 10;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -305px;
+    left: 0;
+    width: 100%;
+    height: 406px;
+    background-image: url(../images/svg/top-wave.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      top: -405px;
     }
   }
 }
