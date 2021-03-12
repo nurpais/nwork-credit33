@@ -1,0 +1,99 @@
+.form {
+  @include card;
+  padding: 80px 20px 100px;
+
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    border: 1px solid $disabled;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: border 0.2s ease;
+    color: $primary-dark;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::placeholder {
+      font-family: inherit;
+      color: $disabled;
+      margin-top: 2px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+    }
+  }
+
+  &__item-select {
+    position: relative;
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+
+      &:invalid {
+        color: $disabled;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4yODYgMS4yODZMNiA2bDQuNzE0LTQuNzE0IiBzdHJva2U9IiMwMTVDRTYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__item-text {
+    height: 144px;
+    resize: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 100px 100px 100px;
+  }
+}
+
+.form {
+  position: relative;
+  z-index: 10;
+
+  &-bottom-img,
+  &-top-img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &-top-img {
+    top: -50px;
+    left: 20px;
+  }
+
+  &-bottom-img {
+    right: -146px;
+    bottom: -40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-bottom-img {
+      right: -120px;
+    }
+  }
+}

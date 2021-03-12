@@ -8,4 +8,12 @@ if (document.querySelector(".navbar")) {
       this.closest(".dropdown").classList.toggle("dropdown--active");
     });
   });
+
+  window.addEventListener("scroll", function (e) {
+    if (window.pageYOffset > 32) {
+      document.documentElement.classList.add("navbar--sticky");
+    } else {
+      document.documentElement.classList.remove("navbar--sticky");
+    }
+  });
 }

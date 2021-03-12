@@ -1,0 +1,19 @@
+.contacts {
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      max-width: 180px;
+      margin: 0 !important;
+    }
+  }
+}

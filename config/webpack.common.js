@@ -69,6 +69,29 @@ module.exports = {
       scriptLoading: "blocking",
       excludeChunks: ["calc"],
     }),
+
+    new HtmlWebpackPlugin({
+      template: paths.src + "/form.html",
+      filename: "form.html",
+      minify: false,
+      scriptLoading: "blocking",
+      excludeChunks: ["calc"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: paths.src + "/contact-us.html",
+      filename: "contact-us.html",
+      minify: false,
+      scriptLoading: "blocking",
+      excludeChunks: ["calc"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: paths.src + "/calculator.html",
+      filename: "calculator.html",
+      minify: false,
+      scriptLoading: "blocking",
+    }),
   ],
   // Determine how modules within the project are treated
   module: {

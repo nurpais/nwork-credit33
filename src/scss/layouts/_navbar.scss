@@ -10,6 +10,10 @@
   }
 }
 
+.navbar--sticky .navbar {
+  box-shadow: 0px 3px 3px rgba(23, 43, 77, 0.08);
+}
+
 .navbar--active .logo {
   @include media-breakpoint-down(lg) {
     img {
@@ -29,6 +33,7 @@
   z-index: 1000;
   top: 0;
   background-color: #fff;
+  transition: box-shadow 0.2s ease;
 
   & > .container {
     height: 60px;

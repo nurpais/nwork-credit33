@@ -12,6 +12,7 @@
 
   &--card {
     padding-top: 40px;
+    background: linear-gradient(0deg, $primary-dark 0%, $primary-dark 77%, rgba(253, 187, 45, 0) 47%);
   }
 
   &::before {
@@ -38,6 +39,15 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: -2;
+  }
+
+  &--transparent {
+    background: none !important;
+
+    &::before,
+    &::after {
+      content: none;
+    }
   }
 
   @include media-breakpoint-up(md) {
