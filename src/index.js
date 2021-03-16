@@ -7,3 +7,5 @@ import "./js/accordion";
 import "./js/accordion-product";
 import "./js/swiper-reviews";
 import "./js/swiper-news";
+import "./js/blog-category";
+import "./js/form";

@@ -97,3 +97,96 @@
     }
   }
 }
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+// .select-selected {
+//   background-color: DodgerBlue;
+// }
+
+// /* Style the arrow inside the select element: */
+.select-selected:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4yODYgMS4yODZMNiA2bDQuNzE0LTQuNzE0IiBzdHJva2U9IiMwMTVDRTYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+// /* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  transform: rotate(180deg);
+}
+
+.select-selected.select-arrow-active {
+  border-color: $primary;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: $disabled;
+  border: 1px solid $disabled;
+  border-radius: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  padding: 10px 0;
+
+  @include card;
+
+  & > * {
+    border: none !important;
+    border-radius: 0 !important;
+    color: $primary-light !important;
+    padding: 7px 20px !important;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #f4f5f7;
+      color: $primary-dark !important;
+    }
+  }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+// .select-items div:hover,
+// .same-as-selected {
+//   background-color: rgba(0, 0, 0, 0.1);
+// }
+
+// .same-as-selected {
+//   color: $primary-dark !important;
+// }

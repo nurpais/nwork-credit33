@@ -192,6 +192,11 @@
     height: 26px;
     color: #fff;
     font-size: 14px;
+
+    & > *:first-child {
+      margin-right: 5px;
+      display: inline-block;
+    }
   }
 
   &__chart-legend-1 {

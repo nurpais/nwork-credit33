@@ -7,7 +7,7 @@ module.exports = {
       content: ["./**/*.html"],
       css: [], // css
       safelist: {
-        standard: [/active/, /swiper/, /sticky/, /pagination/],
+        standard: [/active/, /swiper/, /sticky/, /pagination/, /select/, /custom/, /hide/],
       },
     }),
 
