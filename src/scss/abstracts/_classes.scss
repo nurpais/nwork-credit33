@@ -64,3 +64,9 @@
     }
   }
 }
+
+.space-y {
+  p:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}

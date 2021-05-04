@@ -167,6 +167,12 @@
   font-weight: 400;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  color: $primary-dark;
+
+  span {
+    display: inline-block;
+    margin-top: 2px;
+  }
 
   &:hover {
     opacity: 0.8;
